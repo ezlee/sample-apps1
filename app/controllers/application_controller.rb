@@ -6,7 +6,7 @@ class ApplicationController < ActionController::Base
   def hello
     require 'socket'
     ip = `/sbin/ifconfig eth0 | grep 'net addr' | awk '{print $2}' | sed -e s/.*://`.strip
-    render text: "Hello World   \n IP is "+ip
+    render text: "Hello World test1  \n IP is "+ip
   end 
 
 end
